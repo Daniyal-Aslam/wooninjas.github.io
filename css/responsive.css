@@ -1,0 +1,33 @@
+@media only screen and (max-width: 990px) {
+    .container{
+        width: 100%;
+    }
+    
+  } 
+  @media only screen and (max-width: 768px) {
+    .container{
+        width: 95%; 
+        text-align: center;
+    } 
+    h1{font-size: 30px;}
+    .section-one .tab-content h1:after{width: 100%;left: 0;}
+    .section-one .tab-btn{font-size: 14px;}
+    .hero-section .logo{   width: 40%;}
+    .section-one .tab-content{padding-top: 25px;}
+    .hero-section .logo img{width: 100%;}
+    .theme_setting span{padding-right:0;font-size: 12px;padding-bottom:10px;text-align: center;}
+    .theme_setting{display: grid;place-content: center;height: 80px;}
+    .theme_btn{margin: auto;}
+    .tab-menu ul{display: flex;justify-content: space-between;}
+    .user-info{width: 50%;}
+    .user-info ul b{display: block;margin: 8px 0;}
+    .user-info ul li{margin: 8px 0;}
+  }
+  @media only screen and (max-width: 767px) {
+    .container{
+        width: 95%; 
+        text-align: center;
+    }
+    .section-one .btn a{max-width: 40%;}
+    .section-one .tab-btn{font-size: 14px;}
+  }

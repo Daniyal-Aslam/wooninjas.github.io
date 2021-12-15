@@ -1,0 +1,295 @@
+/* UNIVERSAL STYLEING BEGIN */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+ul{padding: 0;}
+li{ list-style-type: none;}
+
+/* TYPOGRAPHY BEGIN */
+h1{font-size: 50px;}
+h2{font-size: 40px;}
+h3{font-size: 30px;}
+h4{font-size: 25px;}
+h5{font-size: 20px;}
+h6{font-size: 18px;}
+p{font-size: 16px;}
+/* TYPOGRAPHY END */
+
+/* UNIVERSAL STYLEING END */
+
+/* OWN CLASSES BEGIN */ 
+.container{
+    width: 1100px;
+    margin: auto;
+}
+/* OWN CLASSES END */ 
+
+/* THEME STYLEING BEGIN  */
+body{
+    background: #FFFFFF;
+}
+body.night{
+    background: #222222;
+}
+body.night .hero-section{
+    background: #3C3B3A;
+    border-bottom: 1px solid #728188;
+}
+body.night .hero-section .label{ 
+	background-color: #728188;
+} 
+body.night .light-mode-icon.night{
+    display: block;
+    opacity: 1;
+}
+body.night .light-mode-icon.day{
+    display: none;
+    transition: opacity 1s ease-out;
+} 
+body.night .section-one .tab-content p,body.night .user-info ul b ,body.night  .time-info ul li small,body.night .section-one .btn a{color: #fff;}
+body.night .section-one .btn a svg{stroke: #fff;}
+body.night .section-one .btn a  {background:#3C3B3A;border:1px solid #728188;}
+body.night .section-one .btn a:hover{background: #0984E3;border: 1px solid #0984E3;}
+body.night .theme_setting span{color: #FFFFFF;}
+/* THEME STYLEING END  */
+
+/* HEADER BEGIN */
+.hero-section{
+    border-bottom: 1px solid #E2E7ED; 
+    height: 80px; 
+}
+.hero-section .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.hero-section .logo{
+    height: 80px;  
+    display: grid; 
+    place-content: center;  
+}  
+.hero-section .checkbox {
+	opacity: 0;
+	position: absolute;
+} 
+.light-mode-icon.night{
+    display: none;
+}
+.hero-section .label {
+	background-color: #0984E3;
+	border-radius: 15px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+	position: relative;
+	width: 60px;
+    height: 30px; 
+} 
+.hero-section .label .light-mode-icon {  
+	position: absolute;
+	top: 2px;
+	left: 5px;
+    height: 25px;
+    width: 20px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+} 
+.hero-section .checkbox:checked + .label .light-mode-icon {
+	transform: translateX(24px);
+}   
+/* HEADER END */
+
+/* SECTION-ONE BEGIN */
+.section-one{
+    padding: 40px 0;
+}
+.section-one .btn{
+    margin: 30px 0;
+}
+.section-one .btn a{
+    border: 1px solid #E2E7ED;
+    border-radius: 6px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #3A3A3A;
+    font-size: 13px;
+    max-width: 12%;
+    text-align: center;
+    display: block; 
+    transition: 0.6s ease;
+}
+.section-one .btn a:hover{
+    background: #0984E3;
+    color: #fff;
+    border: 1px solid #0984E3;
+}
+.section-one .btn a:hover  svg{
+    stroke: #fff;
+}
+#showPrev{display: none;}
+.theme_setting{
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.theme_setting span{padding-right: 30px;} 
+.section-one .btn a svg{
+    margin:0 8px ;  
+    stroke: #3A3A3A;
+    transition: 0.6s ease;
+} 
+.section-one .tab-btn{
+    color: #728188;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 0.6s ease;
+    position: relative;
+}
+.section-one .tab-btn:hover {
+    color: #0984E3; 
+}
+.section-one .tab-btn:after{
+    content: '';
+    background: #0984E3;
+    height: 6px;
+    display: block;
+    position: absolute;
+    width: 0;
+    bottom: -33px;
+    transition: 0.6s ease;
+    left: 0;
+}
+.section-one .tab-btn:hover:after{
+    width: 100%;
+}
+.section-one .tab-btn:focus:after{
+    width: 100%;
+}
+.section-one .tab-btn:focus{
+    color: #0984E3;
+}
+.section-one .tab-btn svg,.section-one .tab-btn span{
+    display: inline-block;
+    vertical-align: middle; 
+}
+.section-one .tab-btn svg rect,.section-one .tab-btn svg path{ 
+    transition: 0.6s ease;
+}
+.section-one .tab-btn:hover svg rect,.section-one .tab-btn:focus svg rect{ 
+    stroke: #0984E3;
+} 
+.section-one .tab-btn:hover svg path,.section-one .tab-btn:focus svg path{
+    fill: #0984E3;
+}
+.section-one  ul li{
+    display: inline-block; 
+}
+.section-one .tab-content h1{ 
+    padding-bottom: 20px;
+    color: #0984E3;
+    position: relative;
+}
+.section-one .tab-content h1:after{
+    background: #0984E3;
+    content: '';
+    position: absolute;
+    width: 10%;
+    left: 0; 
+    height: 4px;
+    bottom: 12px;
+}
+.section-one .tab-menu{
+    padding: 20px 0;
+    border-bottom: 6px solid #E2E7ED;
+}
+.section-one .tab-menu ul li{
+    margin-left: 20px;
+}
+.section-one .tab-content p{
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3A3A;
+}
+.section-one .tab-content{
+    padding-top: 50px;
+}
+.activity-box{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid #E2E7ED;
+    border-radius: 6px;
+    mix-blend-mode: normal;
+    padding:  5px;
+    margin: 15px 0;
+}
+.activity-box ul li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.activity-box ul li img[alt='user-avatar']{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+} 
+.user-info ul li a{
+    text-decoration: underline;
+    font-size: 13px;
+    color: #0984E3;
+    line-height: 16px;
+    font-weight: 400;
+}
+.time-info{
+    display: flex;
+    align-items: center;
+} 
+.user-info ul li{margin-left: 10px;}
+.time-info ul li{margin-left: 15px;}
+.user-info ul b{
+    margin: 0 10px;
+    color: #000;
+}
+.user-info ul span{
+    color:#728188;
+}
+.user-info ul li a span{
+    color: #0984E3;
+    padding: 5px;
+}
+.time-info ul li a{
+    color:#728188;
+}
+.time-info ul li a small{
+    color:#728188;
+    font-size: 13px;
+    transition: 0.6s ease;
+} 
+.time-info ul li a img{
+    margin-right: 8px;
+}  
+.time-info ul li a:hover{color: #0984E3;}
+.time-info ul li a:hover small,.time-info ul li a:focus small{color: #0984E3;}
+.time-info ul li a:hover svg path,.time-info ul li a:focus svg path{
+    fill: #0984E3;
+    transition: 0.6s ease;
+} 
+.time-info ul li span{
+    display: inline-block;
+     width: 8px;
+     height: 8px;
+     border-radius: 50%;
+     background: #0984E3;
+     margin-right: 8px;
+}
+.time-info ul li small{
+    color:#3A3A3A;
+    font-size: 13px;
+    color: #3A3A3A;
+}
+/* SECTION-ONE END */
